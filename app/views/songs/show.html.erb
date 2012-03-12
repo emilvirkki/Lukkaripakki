@@ -1,5 +1,8 @@
 <p id="notice"><%= notice %></p>
 
+<%= link_to t('actions.edit'), edit_song_path(@song) %> |
+<%= link_to t('actions.destroy'), @song, confirm: t('songs.confirm_destroy'), method: :delete %>
+
 <p>
   <b>Name:</b>
   <%= @song.name %>
@@ -40,6 +43,4 @@
   <%= @song.keywords %>
 </p>
 
-
-<%= link_to 'Edit', edit_song_path(@song) %> |
-<%= link_to 'Back', songs_path %>
+<%= link_to t('actions.back'), songs_path %>

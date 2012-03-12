@@ -1,37 +1,12 @@
-<h1>Listing songs</h1>
+<h1><%= t 'songs.archive' %></h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Lyrics</th>
-    <th>Extra lyrics</th>
-    <th>Introduction</th>
-    <th>Songbook number</th>
-    <th>Melody</th>
-    <th>Lyrics author</th>
-    <th>Keywords</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<%= link_to t('songs.new'), new_song_path %>
+
+<ul>
 
 <% @songs.each do |song| %>
-  <tr>
-    <td><%= song.name %></td>
-    <td><%= song.lyrics %></td>
-    <td><%= song.extra_lyrics %></td>
-    <td><%= song.introduction %></td>
-    <td><%= song.songbook_number %></td>
-    <td><%= song.melody %></td>
-    <td><%= song.lyrics_author %></td>
-    <td><%= song.keywords %></td>
-    <td><%= link_to 'Show', song %></td>
-    <td><%= link_to 'Edit', edit_song_path(song) %></td>
-    <td><%= link_to 'Destroy', song, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
+  <li>
+    <%= link_to song.name, song %>
+  </li>
 <% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Song', new_song_path %>
+</ul>

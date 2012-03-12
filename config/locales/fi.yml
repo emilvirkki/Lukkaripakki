@@ -130,7 +130,7 @@ fi:
     submit:
       create: Luo %{model}
       submit: Tallenna %{model}
-      update: Päivitä %{model}
+      update: Tallenna %{model}
     # THESE CAN BE USED TO LOCALIZE FORM LABELS
     label:
       song:
@@ -212,10 +212,14 @@ fi:
       <<: *errors
 
   songs:
-    new: Uusi laulu
+    new: Uusi laulu arkistoon
     create: Luo laulu
     save: Tallenna laulu
+    edit: Muokkaa laulua arkistossa
+    archive: Lauluarkisto
+    confirm_destroy: Haluatko varmasti poistaa laulun?
   actions:
     show: Näytä
     back: Takaisin
-    
+    edit: Muokkaa
+    destroy: Poista
