@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @song.name %>
+</p>
+
+<p>
+  <b>Lyrics:</b>
+  <%= @song.lyrics %>
+</p>
+
+<p>
+  <b>Extra lyrics:</b>
+  <%= @song.extra_lyrics %>
+</p>
+
+<p>
+  <b>Introduction:</b>
+  <%= @song.introduction %>
+</p>
+
+<p>
+  <b>Songbook number:</b>
+  <%= @song.songbook_number %>
+</p>
+
+<p>
+  <b>Melody:</b>
+  <%= @song.melody %>
+</p>
+
+<p>
+  <b>Lyrics author:</b>
+  <%= @song.lyrics_author %>
+</p>
+
+<p>
+  <b>Keywords:</b>
+  <%= @song.keywords %>
+</p>
+
+
+<%= link_to 'Edit', edit_song_path(@song) %> |
+<%= link_to 'Back', songs_path %>
