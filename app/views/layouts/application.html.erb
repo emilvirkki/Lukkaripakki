@@ -7,13 +7,19 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<ul>
 <% @nav_pages.each do |page| %>
-  <%= link_to page.title, page %>
+ <li> <%= link_to page.title, page %> </li>
+  
+  
 <% end %>
+</ul>
 
 <p id="notice"><%= notice %></p>
 
 <%= yield %>
+
+
 
 </body>
 </html>
