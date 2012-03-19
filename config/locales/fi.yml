@@ -141,7 +141,6 @@ fi:
         songbook_number: Numero laulukirjassa
         lyrics_author: Sanoittaja
         keywords: Tagit
-        #rails generate scaffold song name lyrics:text extra_lyrics:text introduction:text songbook_number melody lyrics_author keywords:text
   number:
     currency:
       format:
@@ -223,3 +222,4 @@ fi:
     back: Takaisin
     edit: Muokkaa
     destroy: Poista
+    all_pages: Kaikki sivut

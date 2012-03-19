@@ -7,6 +7,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<% @nav_pages.each do |page| %>
+  <%= link_to page.title, page %>
+<% end %>
+
+<p id="notice"><%= notice %></p>
 
 <%= yield %>
 
