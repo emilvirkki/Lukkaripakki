@@ -7,19 +7,23 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<header>
+		Sitsipakki
+	</header>
 	<ul>
 <% @nav_pages.each do |page| %>
- <li> <%= link_to page.title, page %> </li>
-  
+ <li><%= link_to page.title, page %></li>
   
 <% end %>
 </ul>
 
-<p id="notice"><%= notice %></p>
-
 <%= yield %>
 
+<p>Sitsit on kivoja</p> 
 
 
 </body>
+<footer>
+	Copyright Emppuli, Noppu ja Tuikku
+</footer>
 </html>
