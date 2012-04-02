@@ -11,3 +11,72 @@
  *= require_self
  *= require_tree .
 */
+
+body {
+	color: #401010;
+	background-color: #f9f0ed;
+	font-family: verdana, tahoma, helvetica, sans-serif;
+	font-size: 14px;
+}
+
+h1 {
+	font-family: tahoma, verdana, helvetica, sans-serif;
+	font-size: 24px;	
+	font-weight: normal;
+}
+
+h2 {
+	font-family: tahoma, verdana, helvetica, sans-serif;
+	font-size: 20px;
+	font-weight: normal;
+}
+
+h3 {
+	font-family: verdana, tahoma, helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;	
+}
+
+a {
+	text-decoration: none;
+	color: #8c2020;	
+}
+
+li {
+	list-style: none;
+	background: none;
+	display: inline;
+}
+
+input, textarea {
+	border-color: #401010;
+	background-color: #ead5d5;
+	color: #401010;	
+}
+
+#nimi, #salasana, #normi { //TAA JA EDELLINEN TOIMII VAAN JOS TIETAA MITA KOODISSA TAPAHTUU
+	border-color: #401010;
+	background-color: #fefdfd;
+	color: #401010;
+}
+
+#ernu {
+	border-color: #401010;
+	background-color: #8c2020;
+	color: #f3d2c1;
+}
+
+#ernunpi {
+	border-color: #401010;
+	background-color: #8c2020;
+	color: #fefdfd; //VAARA VARI
+}
+
+#ernunpi:hover {
+	border-color: #401010;
+	background-color: #401010; //VAARA VARI
+	color: #f3d2c1;
+}
+
+
+
