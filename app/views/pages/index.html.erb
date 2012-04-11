@@ -1,9 +1,9 @@
-<h1>Listing pages</h1>
+<h1><%= t('pages.list') %></h1>
 
 <table>
   <tr>
-    <th>Title</th>
-    <th>Content</th>
+    <th><%= t('activerecord.attributes.page.title') %></th>
+    <th><%= t('activerecord.attributes.page.content') %></th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,13 +13,13 @@
   <tr>
     <td><%= page.title %></td>
     <td><%= page.content %></td>
-    <td><%= link_to 'Show', page %></td>
-    <td><%= link_to 'Edit', edit_page_path(page) %></td>
-    <td><%= link_to 'Destroy', page, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to t('actions.show'), page %></td>
+    <td><%= link_to t('actions.edit'), edit_page_path(page) %></td>
+    <td><%= link_to t('actions.destroy'), page, confirm: t('pages.confirm_destroy'), method: :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Page', new_page_path %>
+<%= link_to t('pages.new'), new_page_path %>
