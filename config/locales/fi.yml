@@ -99,7 +99,7 @@ fi:
     format: ! '%{attribute} %{message}'
     messages:
       accepted: täytyy olla hyväksytty
-      blank: ei voi olla sisällötön
+      blank: ei voi olla tyhjä
       confirmation: ei vastaa varmennusta
       empty: ei voi olla tyhjä
       equal_to: täytyy olla yhtä suuri kuin %{count}
@@ -131,17 +131,6 @@ fi:
       create: Luo %{model}
       submit: Tallenna %{model}
       update: Tallenna %{model}
-    # THESE CAN BE USED TO LOCALIZE FORM LABELS
-    label:
-      song:
-        name: Nimi
-        lyrics: Sanat
-        extra_lyrics: Lisäsäkeistöt
-        introduction: Esittely
-        songbook_number: Numero laulukirjassa
-        lyrics_author: Sanoittaja
-        melody: Sävel
-        keywords: Tagit
   number:
     currency:
       format:
@@ -208,6 +197,20 @@ fi:
   activerecord:
     models:
       song: laulu
+      page: sivu
+    attributes: 
+      page:
+        title: Otsikko
+        content: Sisältö
+      song:
+        name: Nimi
+        lyrics: Sanat
+        extra_lyrics: Lisäsäkeistöt
+        introduction: Esittely
+        songbook_number: Numero laulukirjassa
+        lyrics_author: Sanoittaja
+        melody: Sävel
+        keywords: Tagit
     errors:
       <<: *errors
 
@@ -218,6 +221,11 @@ fi:
     edit: Muokkaa laulua arkistossa
     archive: Lauluarkisto
     confirm_destroy: Haluatko varmasti poistaa laulun?
+  pages:
+    new: Uusi sivu
+    list: Kaikki sivut
+    confirm_destroy: Haluatko varmasti poistaa sivun?
+    edit: Muokkaa sivua
   actions:
     show: Näytä
     back: Takaisin
