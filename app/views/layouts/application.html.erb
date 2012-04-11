@@ -25,13 +25,7 @@
 	</div>
 	
 	<div class="navigation">
-		<ul>
-		<% @nav.each do |item| %>
-			<li>
-				<%= link_to item.title, item.realpath %>
-			</li>
-		</ul>
-		<% end %>
+    <%= raw menu(@nav, @nav_item_crumb) %>
 	</div>
 	
 	
