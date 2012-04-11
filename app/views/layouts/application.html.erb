@@ -7,8 +7,8 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<% @nav_pages.each do |page| %>
-  <%= link_to page.title, page %>
+<% @nav.each do |item| %>
+  <%= link_to item.title, item.realpath %>
 <% end %>
 
 <p id="notice"><%= notice %></p>

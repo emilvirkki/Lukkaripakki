@@ -1,4 +1,6 @@
 SongArchive::Application.routes.draw do
+  resources :nav_items
+
   resources :pages
 
   resources :songs
