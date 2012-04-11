@@ -1,29 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html xml:lang="fi" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
+  <meta charset="utf-8" />
   <title>SongArchive</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+	
+	<div id="wrapper">
+	
+	
 	<header>
-		Sitsipakki
+	<div class="header">
+		<ul>
+			<li>
+				<a href="kirjaudu.html">Kirjaudu</a>
+			</li>
+			<li>
+				<a href="rekisteroidy.html">Rekisteröidy</a>
+			</li>
+		</ul>
+	</div>
+	
+	<div class="navigation">
+		<ul>
+		<% @nav_pages.each do |page| %>
+			<li>
+				<%= link_to page.title, page %>
+			</li>
+		</ul>
+		<% end %>
+	</div>
+	
+	
 	</header>
-	<ul>
-<% @nav_pages.each do |page| %>
- <li><%= link_to page.title, page %></li>
-  
-<% end %>
-</ul>
-
 <%= yield %>
 
 <p>Sitsit on kivoja</p> 
 
-
-</body>
 <footer>
 	Copyright Emppuli, Noppu ja Tuikku
 </footer>
+
+
+	</div>
+</body>
 </html>

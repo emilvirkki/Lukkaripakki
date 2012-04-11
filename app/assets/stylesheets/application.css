@@ -19,64 +19,157 @@ body {
 	font-size: 14px;
 }
 
+table, tr, td {
+	border-width: 0px;
+}
+
+input, textarea {
+	border-color: #401010;
+	background-color: #ead5d5;
+	color: #401010;
+	font-family: verdana, tahoma, helvetica, sans-serif;
+	font-size: 12px;
+}
+
 h1 {
 	font-family: tahoma, verdana, helvetica, sans-serif;
 	font-size: 24px;	
 	font-weight: normal;
 }
 
-h2 {
-	font-family: tahoma, verdana, helvetica, sans-serif;
-	font-size: 20px;
-	font-weight: normal;
+a {
+	font-family: Big Caslon, helvetica, serif;
+	color: #eecfb8;
+	text-align: center;
+	text-decoration: none;
+	
+	border: 2px solid #401010;
+	background-color: #731d1d;
 }
 
-h3 {
+a:hover, a:active {
+	text-decoration: none;
+	background-color: #660000;
+	color: #a6867b;
+}
+
+.rightside a, .fullcontent a {
+	font-family: verdana, tahoma, sans-serif;
+	color: #401010;
+	font-size: 14px;
+	text-decoration: none;
+	
+	border: 0px solid #401010;
+	background-color: #f9f0ed;
+}
+
+.cont_navi a {
 	font-family: verdana, tahoma, helvetica, sans-serif;
 	font-size: 14px;
-	font-weight: bold;	
+	
+	padding: 5px;
+	line-height: 35px;	
 }
 
-a {
-	text-decoration: none;
-	color: #8c2020;	
+#wrapper {
+	width: 964px;
+	position: absolute;
+	top: 40px;
+	left: 50px;	
 }
 
-li {
+.header {
+	position: relative;
+	left: 0px;
+	top: 0px;
+	padding: 3px;
+	
+	border:4px solid #401010;
+	border-bottom: 2px solid #401010;
+	background-image:url(headerkuva.jpg);
+	text-align: right;
+	
+	width: 950px;
+	height: 127px;	
+}
+
+.navigation {
+	position: relative;
+	left: 0px;
+	top: -3px;
+	
+	border:2px solid #401010;
+	background-color: #731d1d;
+	width: 960px;
+	height: 40px;
+	
+	margin: 0px;
+	padding: 0px;
+}
+
+.content {
+	position: relative;
+	top: 30px;
+}
+
+.cont_navi {
+	width: 250px;
+	height: 0px;
+	line-height:50%;
+	
+	position: relative;
+	left: -30px;
+}
+
+.cont_navi li {
+	list-style: none;	
+}
+
+.rightside {
+	width: 770px;
+	
+	position: relative;
+	left: 190px;
+	top: -22px;	
+	text-align: left;
+}
+
+.navigation ul {
 	list-style: none;
-	background: none;
-	display: inline;
+	padding: 0px;
+	margin: 0px; 
 }
 
-input, textarea {
-	border-color: #401010;
-	background-color: #ead5d5;
-	color: #401010;	
+.navigation li {
+	float: left;
+	border: 0px;
+	padding: 0px;
+	margin: 0px;
+	
+	width: 25%;
+}
+ 
+.navigation a {
+	display: block;
+	
+	font-size: 20px;
+	padding: 8px;
+	line-height: 20px;
 }
 
-#nimi, #salasana, #normi { //TAA JA EDELLINEN TOIMII VAAN JOS TIETAA MITA KOODISSA TAPAHTUU
-	border-color: #401010;
-	background-color: #fefdfd;
-	color: #401010;
+.header ul {
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
 }
 
-#ernu {
-	border-color: #401010;
-	background-color: #8c2020;
-	color: #f3d2c1;
+.header li {
+	padding: 0px;
+	margin: 0px;
 }
 
-#ernunpi {
-	border-color: #401010;
-	background-color: #8c2020;
-	color: #fefdfd; //VAARA VARI
+.header a {	
+	font-size: 15px;
+	padding: 5px;
+	line-height: 35px;
 }
-
-#ernunpi:hover {
-	border-color: #401010;
-	background-color: #401010; //VAARA VARI
-	color: #f3d2c1;
-}
-
-
-
