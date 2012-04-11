@@ -25,6 +25,8 @@ class PagesController < ApplicationController
   # GET /pages/new.json
   def new
     @page = Page.new
+    @page.nav_item = NavItem.new
+    @nav_item = @page.nav_item
 
     respond_to do |format|
       format.html # new.html.erb
@@ -35,13 +37,16 @@ class PagesController < ApplicationController
   # GET /pages/1/edit
   def edit
     @page = Page.find(params[:id])
+    @nav_item = @page.nav_item
   end
 
   # POST /pages
   # POST /pages.json
   def create
+    #params[:page][:nav_item] = NavItem.new(params[:page][:nav_item]);
+    #temp = params[:page][:nav_item];
     @page = Page.new(params[:page])
-
+    #@page.nav_item = NavItem.new(temp);
     respond_to do |format|
       if @page.save
         format.html { redirect_to @page, notice: 'Page was successfully created.' }

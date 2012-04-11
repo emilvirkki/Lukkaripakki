@@ -9,7 +9,6 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	
 	<div id="wrapper">
 	
 	
@@ -27,9 +26,9 @@
 	
 	<div class="navigation">
 		<ul>
-		<% @nav_pages.each do |page| %>
+		<% @nav.each do |item| %>
 			<li>
-				<%= link_to page.title, page %>
+				<%= link_to item.title, item.realpath %>
 			</li>
 		</ul>
 		<% end %>

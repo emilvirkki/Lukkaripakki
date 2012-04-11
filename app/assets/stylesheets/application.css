@@ -141,6 +141,7 @@ a:hover, a:active {
 }
 
 .navigation li {
+	list-style: none;
 	float: left;
 	border: 0px;
 	padding: 0px;
@@ -149,7 +150,7 @@ a:hover, a:active {
 	width: 25%;
 }
  
-.navigation a {
+.navigation a { /* EMPPU TAA OIS SELLANEN AKTIIVINEN LINKKI JOLTA SEN SIVUN MISSA NYT OLLAAN PITAIS NAYTTAA */
 	display: block;
 	
 	font-size: 20px;

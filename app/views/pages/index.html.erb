@@ -3,7 +3,6 @@
 <table>
   <tr>
     <th><%= t('activerecord.attributes.page.title') %></th>
-    <th><%= t('activerecord.attributes.page.content') %></th>
     <th></th>
     <th></th>
     <th></th>
@@ -12,7 +11,6 @@
 <% @pages.each do |page| %>
   <tr>
     <td><%= page.title %></td>
-    <td><%= page.content %></td>
     <td><%= link_to t('actions.show'), page %></td>
     <td><%= link_to t('actions.edit'), edit_page_path(page) %></td>
     <td><%= link_to t('actions.destroy'), page, confirm: t('pages.confirm_destroy'), method: :delete %></td>

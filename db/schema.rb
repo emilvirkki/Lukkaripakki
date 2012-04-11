@@ -11,13 +11,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120319093508) do
+ActiveRecord::Schema.define(:version => 20120411093141) do
+
+  create_table "nav_items", :force => true do |t|
+    t.string   "title"
+    t.string   "path"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "priority"
+  end
 
   create_table "pages", :force => true do |t|
     t.string   "title"
     t.text     "content"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.integer  "nav_item_id"
   end
 
   create_table "songs", :force => true do |t|
