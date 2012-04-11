@@ -135,6 +135,7 @@ a:hover, a:active {
 }
 
 .navigation ul {
+  position: relative;
 	list-style: none;
 	padding: 0px;
 	margin: 0px; 
@@ -150,12 +151,38 @@ a:hover, a:active {
 	width: 25%;
 }
  
-.navigation a { /* EMPPU TAA OIS SELLANEN AKTIIVINEN LINKKI JOLTA SEN SIVUN MISSA NYT OLLAAN PITAIS NAYTTAA */
+.navigation a {
 	display: block;
-	
 	font-size: 20px;
 	padding: 8px;
 	line-height: 20px;
+}
+
+.navigation .active a {
+  background: green; /* Change this to proper style */
+}
+
+.navigation > ul > li > ul {
+  position: absolute;
+  margin-top: 0.5em;
+  top: 36px;
+  width: 25%;
+}
+
+.navigation > ul > li > ul li {
+  width: 100%;
+}
+
+.navigation > ul > li > ul ul {
+  padding-left: 2em;
+}
+
+#content {
+  margin-left: 28%;
+}
+
+body.nav-depth-1 #content {
+  margin-left: 0;
 }
 
 .header ul {

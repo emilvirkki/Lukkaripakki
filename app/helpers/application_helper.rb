@@ -10,11 +10,12 @@ module ApplicationHelper
   end
   
   def menu(items, path, level = 0, maxlevel = 1000)
+    return '' unless items
     return '' if level >= maxlevel + 1 || level >= items.size
     
     val = "<ul>";
     items[level].each {|item|
-      if(item.id == path[level].id)
+      if(path && item.id == path[level].id)
         val = val + '<li class="active">' + link_to(item.title, item.realpath) + menu(items, path, level+1, maxlevel)
       else
         val = val + '<li>' + link_to(item.title, item.realpath)
