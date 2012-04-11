@@ -140,6 +140,7 @@ fi:
         introduction: Esittely
         songbook_number: Numero laulukirjassa
         lyrics_author: Sanoittaja
+        melody: Sävel
         keywords: Tagit
   number:
     currency:
