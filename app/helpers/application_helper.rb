@@ -15,7 +15,8 @@ module ApplicationHelper
     
     val = "<ul>";
     items[level].each {|item|
-      if(path && item.id == path[level].id)
+      # We're viewing a nav item in the active path, mark it active and show it's children
+      if(path && path[level] && item.id == path[level].id)
         val = val + '<li class="active">' + link_to(item.title, item.realpath) + menu(items, path, level+1, maxlevel)
       else
         val = val + '<li>' + link_to(item.title, item.realpath)

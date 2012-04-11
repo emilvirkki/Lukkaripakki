@@ -15,6 +15,7 @@ class ApplicationController < ActionController::Base
       @nav_item_crumb.each {|item|
         @nav.push(item.siblings) if item
       }
+      @nav_item_crumb.pop
       logger.debug @nav.inspect
     else
       @nav.push NavItem.roots
