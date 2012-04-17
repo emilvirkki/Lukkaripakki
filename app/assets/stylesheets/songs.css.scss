@@ -2,3 +2,22 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+#tagcloud {
+  background-color: rgb(255,255,255);
+  width: 600px;
+  border:2px solid #401010;
+  padding: 10px;
+}
+#tagcloud a{
+  font-family: helvetica, serif;
+  color: #401010;
+  text-align: center;
+  text-decoration: none;
+  border: 0px;
+  background-color: rgb(255,255,255);
+  }
+  
+.css1 { font-size: 0.8em; }
+.css2 { font-size: 1.1em; }
+.css3 { font-size: 1.4em; }
+.css4 { font-size: 1.7em; }
