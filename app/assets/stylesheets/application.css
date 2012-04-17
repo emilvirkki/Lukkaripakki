@@ -72,10 +72,16 @@ a:hover, a:active {
 }
 
 #wrapper {
+	margin: 0 auto;
 	width: 964px;
-	position: absolute;
-	top: 40px;
-	left: 50px;	
+}
+
+#tagcloud {
+	border: 1px solid #401010;
+	background-color: #fefdfd;
+	color: #401010;
+	width: 500px;	
+	height: 150px;
 }
 
 .header {
@@ -173,4 +179,43 @@ a:hover, a:active {
 	font-size: 15px;
 	padding: 5px;
 	line-height: 35px;
+}
+
+.songlist {
+  width: 70%;
+  padding: 0px;
+}
+
+
+.songlist ul {
+  list-style: none;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+.songlist li {
+  list-style: none;
+  float: left;
+  width: 100%;
+  height: 30px;
+  border: 1px solid #401010;
+  background-color: #fefdfd;
+}
+  
+.songlist a {
+  font-family: verdana, tahoma, sans-serif;
+  color: #401010;
+  font-size: 14px;
+  text-decoration: none;
+  border: 0px;
+  background: none;
+}
+
+.cont_navi a {
+  font-family: verdana, tahoma, helvetica, sans-serif;
+  font-size: 14px;
+  
+  padding: 5px;
+  line-height: 35px;  
 }
