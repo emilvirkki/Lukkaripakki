@@ -8,8 +8,10 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
 	<br /><br/>
+<body class="nav-depth-<%=@nav.size%>">
 	<div id="wrapper">
 	
 	
@@ -26,21 +28,18 @@
 	</div>
 	
 	<div class="navigation">
-		<ul>
-		<% @nav_pages.each do |page| %>
-			<li>
-				<%= link_to page.title, page %>
-			</li>
-		</ul>
-		<% end %>
+    <%= raw menu(@nav, @nav_item_crumb) %>
 	</div>
-	
-	
 	</header>
+	
 <%= yield %>
 
 <br/></br/>
 <p>Sitsit on kivoja</p> 
+	
+	<div id="content">
+    <%= yield %>
+  </div>
 
 <footer>
 	Copyright Emppuli, Noppu ja Tuikku

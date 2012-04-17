@@ -1,6 +1,6 @@
-<h1>Editing page</h1>
+<h1><%= t('pages.edit') %></h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @page %> |
-<%= link_to 'Back', pages_path %>
+<%= link_to t('actions.show'), @page %> |
+<%= link_to t('actions.back'), pages_path %>
