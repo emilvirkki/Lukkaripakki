@@ -9,7 +9,7 @@
 
 <% @nav_items.each do |item| %>
   <tr>
-    <td><%= link_to item.title, item.path %></td>
+    <td><%= link_to item.title %></td>
     <td><%= link_to 'Edit', edit_nav_item_path(item) %></td>
     <td><%= link_to 'Destroy', item, confirm: 'Are you sure?', method: :delete %></td>
   </tr>

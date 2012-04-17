@@ -72,11 +72,11 @@ a:hover, a:active {
 }
 
 #wrapper {
+	margin: 0 auto;
 	width: 964px;
-	position: absolute;
-	top: 40px;
-	left: 50px;	
 }
+
+
 
 .header {
 	position: relative;
@@ -135,6 +135,7 @@ a:hover, a:active {
 }
 
 .navigation ul {
+  position: relative;
 	list-style: none;
 	padding: 0px;
 	margin: 0px; 
@@ -150,12 +151,38 @@ a:hover, a:active {
 	width: 25%;
 }
  
-.navigation a { /* EMPPU TAA OIS SELLANEN AKTIIVINEN LINKKI JOLTA SEN SIVUN MISSA NYT OLLAAN PITAIS NAYTTAA */
+.navigation a {
 	display: block;
-	
 	font-size: 20px;
 	padding: 8px;
 	line-height: 20px;
+}
+
+.navigation .active a {
+  background: rgb(85,26,20); 
+  }
+
+.navigation > ul > li > ul {
+  position: absolute;
+  margin-top: 0.5em;
+  top: 36px;
+  width: 25%;
+}
+
+.navigation > ul > li > ul li {
+  width: 100%;
+}
+
+.navigation > ul > li > ul ul {
+  padding-left: 2em;
+}
+
+#content {
+  margin-left: 28%;
+}
+
+body.nav-depth-1 #content {
+  margin-left: 0;
 }
 
 .header ul {
@@ -173,4 +200,43 @@ a:hover, a:active {
 	font-size: 15px;
 	padding: 5px;
 	line-height: 35px;
+}
+
+.songlist {
+  width: 65%;
+  padding: 0px;
+}
+
+
+.songlist ul {
+  list-style: none;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+.songlist li {
+  list-style: none;
+  float: left;
+  width: 100%;
+  height: 30px;
+  border: 1px solid #401010;
+  background-color: #fefdfd;
+}
+  
+.songlist a {
+  font-family: verdana, tahoma, sans-serif;
+  color: #401010;
+  font-size: 14px;
+  text-decoration: none;
+  border: 0px;
+  background: none;
+}
+
+.cont_navi a {
+  font-family: verdana, tahoma, helvetica, sans-serif;
+  font-size: 14px;
+  
+  padding: 5px;
+  line-height: 35px;  
 }

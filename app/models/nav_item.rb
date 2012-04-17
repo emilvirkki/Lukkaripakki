@@ -1,4 +1,6 @@
 class NavItem < ActiveRecord::Base
+  has_ancestry
+  
   has_one :page, :dependent => :destroy
   
   after_initialize :default_values
@@ -15,5 +17,9 @@ class NavItem < ActiveRecord::Base
   
   def default_values
     self.priority ||= 0;
+  end
+  
+  def parent_items
+    NavItem.to_depth(0)
   end
 end

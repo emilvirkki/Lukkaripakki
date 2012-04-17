@@ -1,3 +1,5 @@
+<div id="content">
+
 <h1><%= t 'songs.archive' %></h1>
 
 <div id= "tagcloud">
@@ -9,7 +11,7 @@
  
 <%= link_to t('songs.new'), new_song_path %>
 
-
+<div class="songlist">
 <ul>
 <% @songs.each do |song| %>
   <li>
@@ -18,3 +20,5 @@
 <% end %>
 </ul>
 
+</div>
+</div>

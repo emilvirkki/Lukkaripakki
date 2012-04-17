@@ -39,3 +39,5 @@ gem 'jquery-rails'
 
 gem 'acts-as-taggable-on', '~> 2.2.2'
 
+# Tree structures
+gem 'ancestry'
