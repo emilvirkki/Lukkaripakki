@@ -43,10 +43,9 @@ class PagesController < ApplicationController
   # POST /pages
   # POST /pages.json
   def create
-    #params[:page][:nav_item] = NavItem.new(params[:page][:nav_item]);
-    #temp = params[:page][:nav_item];
+    #TODO Force the nav item to have a title e.g. by defaulting to page title
     @page = Page.new(params[:page])
-    #@page.nav_item = NavItem.new(temp);
+    
     respond_to do |format|
       if @page.save
         format.html { redirect_to @page, notice: 'Page was successfully created.' }
