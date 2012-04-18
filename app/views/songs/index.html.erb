@@ -1,13 +1,17 @@
+<div id="content">
+
 <h1><%= t 'songs.archive' %></h1>
 
-// LOMAKE
-DIV_BOKSI TAGEILLE
-
-LISTA LAULUILLE TOHON ALLE
-
-
+<div id= "tagcloud">
+<% logger.debug(@tags.inspect)%>
+<% tag_cloud(@tags, %w(css1 css2 css3 css4)) do |tag, css_class| %>
+  <%= link_to tag.name, { :action => :tag, :id => tag.name }, :class => css_class %>
+  <% end %>
+ </div>
+ 
 <%= link_to t('songs.new'), new_song_path %>
 
+<div class="songlist">
 <ul>
 <% @songs.each do |song| %>
   <li>
@@ -15,3 +19,6 @@ LISTA LAULUILLE TOHON ALLE
   </li>
 <% end %>
 </ul>
+
+</div>
+</div>

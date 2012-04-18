@@ -3,6 +3,7 @@ class SongsController < ApplicationController
   # GET /songs.json
   def index
     @songs = Song.all
+    @tags = Song.tag_counts_on(:tags)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -41,6 +42,11 @@ class SongsController < ApplicationController
   # POST /songs.json
   def create
     @song = Song.new(params[:song])
+    @song.tag_list = @song.keywords
+    #laitetaanko tähän kaikki tagit, vai haetaan uudelle laululle asetetut tagit?
+    # muita mietintöjä yllä olevan tilalle:
+    # = 
+    # = Song.new(params[:keywords])
 
     respond_to do |format|
       if @song.save
@@ -52,7 +58,7 @@ class SongsController < ApplicationController
       end
     end
   end
-
+  
   # PUT /songs/1
   # PUT /songs/1.json
   def update
