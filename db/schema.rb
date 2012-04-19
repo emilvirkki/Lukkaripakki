@@ -11,13 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120411125015) do
+ActiveRecord::Schema.define(:version => 20120419095104) do
 
   create_table "nav_items", :force => true do |t|
     t.string   "title"
-    t.string   "path"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string   "explicit_path"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
     t.integer  "priority"
     t.string   "ancestry"
   end

@@ -9,6 +9,10 @@ class PagesController < ApplicationController
       format.json { render json: @pages }
     end
   end
+  
+  def default
+    redirect_to NavItem.roots[0].realpath
+  end
 
   # GET /pages/1
   # GET /pages/1.json

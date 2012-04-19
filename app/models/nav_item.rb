@@ -12,7 +12,7 @@ class NavItem < ActiveRecord::Base
     if(self.page)
       return Rails.application.routes.url_helpers.page_path(self.page)
     end
-    self.path
+    '/' + self.explicit_path
   end
   
   def default_values

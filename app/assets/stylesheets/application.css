@@ -134,8 +134,11 @@ a:hover, a:active {
 	text-align: left;
 }
 
-.navigation ul {
+.navigation {
   position: relative;
+}
+
+.navigation ul {
 	list-style: none;
 	padding: 0px;
 	margin: 0px; 
@@ -158,12 +161,13 @@ a:hover, a:active {
 	line-height: 20px;
 }
 
-.navigation .active a {
+.navigation .active > a {
   background: rgb(85,26,20); 
   }
 
 .navigation > ul > li > ul {
   position: absolute;
+  left: 0;
   margin-top: 0.5em;
   top: 36px;
   width: 25%;
@@ -171,6 +175,7 @@ a:hover, a:active {
 
 .navigation > ul > li > ul li {
   width: 100%;
+  margin: 10px 0 0;
 }
 
 .navigation > ul > li > ul ul {
@@ -205,6 +210,7 @@ body.nav-depth-1 #content {
 .songlist {
   width: 65%;
   padding: 0px;
+  margin: 1em 0;
 }
 
 
@@ -213,14 +219,14 @@ body.nav-depth-1 #content {
   width: 100%;
   margin: 0px;
   padding: 0px;
+  border-bottom: 2px solid #401010;
 }
 
 .songlist li {
   list-style: none;
-  float: left;
-  width: 100%;
-  height: 30px;
-  border: 1px solid #401010;
+  
+  border: 2px solid #401010;
+  border-bottom: 0;
   background-color: #fefdfd;
 }
   
@@ -230,7 +236,12 @@ body.nav-depth-1 #content {
   font-size: 14px;
   text-decoration: none;
   border: 0px;
+  padding: 0 0 0 0.5em;
   background: none;
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  text-align: left;
 }
 
 .cont_navi a {

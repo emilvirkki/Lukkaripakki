@@ -32,6 +32,6 @@ class ApplicationController < ActionController::Base
     end
     
     # Else get a generic nav item using path
-    NavItem.find_by_path(request.fullpath);
+    NavItem.find_by_explicit_path(request.fullpath);
   end
 end

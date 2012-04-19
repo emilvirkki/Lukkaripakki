@@ -30,7 +30,9 @@ class NavItemsController < ApplicationController
   # POST /nav_items
   # POST /nav_items.json
   def create
-    @nav_item = NavItem.new(params[:nav_item])
+    item = params[:nav_item][:nav_item]
+    item[:explicit_path] = params[:nav_item][:explicit_path]
+    @nav_item = NavItem.new(item)
 
     respond_to do |format|
       if @nav_item.save
