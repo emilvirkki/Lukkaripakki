@@ -11,7 +11,11 @@ class PagesController < ApplicationController
   end
   
   def default
-    redirect_to NavItem.roots[0].realpath
+    if NavItem.roots[0]
+      redirect_to NavItem.roots[0].realpath
+    else
+      redirect_to pages_path
+    end
   end
 
   # GET /pages/1
