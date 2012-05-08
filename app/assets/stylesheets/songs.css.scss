@@ -2,6 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+h2 {
+  font-family: tahoma, verdana, helvetica, sans-serif;
+  font-size: 19px;  
+  font-weight: normal;
+  background-color: #c0c0c0;
+}
+
 #tagcloud {
   background-color: #fefdfd;
   width: 605px;
@@ -18,6 +25,16 @@
   border: 0px;
   background-color: rgb(255,255,255);
   }
+
+#song {
+  float: left;
+  width: 430px;
+}
+
+#information {
+  float: right;
+  width: 430px;
+}
   
 .css1 { font-size: 0.8em; }
 .css2 { font-size: 1.1em; }

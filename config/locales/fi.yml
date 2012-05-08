@@ -202,6 +202,8 @@ fi:
       page:
         title: Otsikko
         content: Sisältö
+        page: Sivun sisältö
+        navigation: Navigointipalkki
       song:
         name: Nimi
         lyrics: Sanat
@@ -211,6 +213,7 @@ fi:
         lyrics_author: Sanoittaja
         melody: Sävel
         keywords: Tagit
+        basic_information: Perustiedot
     errors:
       <<: *errors
 

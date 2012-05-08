@@ -1,46 +1,52 @@
 <p id="notice"><%= notice %></p>
 
+<div>
+	<p>
+  <h1><%= @song.name %></h1>
+</p>
 <%= link_to t('actions.edit'), edit_song_path(@song) %> |
 <%= link_to t('actions.destroy'), @song, confirm: t('songs.confirm_destroy'), method: :delete %>
+</div>
+
+<div id ='columns'>
+<div id="song">
 
 <p>
-  <b>Name:</b>
-  <%= @song.name %>
-</p>
-
-<p>
-  <b>Lyrics:</b>
   <%= simple_format @song.lyrics %>
 </p>
 
 <p>
-  <b>Extra lyrics:</b>
+  <b><%= t('activerecord.attributes.song.extra_lyrics')%>:</b>
   <%= simple_format @song.extra_lyrics %>
 </p>
 
+<%= link_to t('actions.back'), songs_path %>
+</div>
+
+<div id="information">
 <p>
-  <b>Introduction:</b>
+  <b><%= t('activerecord.attributes.song.introduction')%>:</b>
   <%= @song.introduction %>
 </p>
 
 <p>
-  <b>Songbook number:</b>
-  <%= @song.songbook_number %>
-</p>
-
-<p>
-  <b>Melody:</b>
+  <b><%= t('activerecord.attributes.song.melody')%>:</b>
   <%= @song.melody %>
 </p>
 
 <p>
-  <b>Lyrics author:</b>
+  <b><%= t('activerecord.attributes.song.lyrics_author')%>:</b>
   <%= @song.lyrics_author %>
 </p>
 
 <p>
-  <b>Keywords:</b>
-  <%= @song.keywords %>
+  <b><%= t('activerecord.attributes.song.songbook_number')%>:</b>
+  <%= @song.songbook_number %>
 </p>
 
-<%= link_to t('actions.back'), songs_path %>
+<p>
+  <b><%= t('activerecord.attributes.song.keywords')%>:</b>
+  <%= @song.keywords %>
+</p>
+</div>
+</div>
