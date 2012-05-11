@@ -20,6 +20,7 @@ test:
 
 production:
   adapter: postgresql
+  host: localhost
   encoding: unicode
   database: hype2007-demo
   pool: 5
