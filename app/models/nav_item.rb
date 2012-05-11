@@ -16,7 +16,8 @@ class NavItem < ActiveRecord::Base
   end
   
   def default_values
-    self.priority ||= 0;
+    #FIXME Breaks the nav for some reason but is needed for saving
+    #self.priority ||= 0
   end
   
   def parent_items

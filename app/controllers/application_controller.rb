@@ -10,10 +10,12 @@ class ApplicationController < ActionController::Base
     
     if(@nav_item_current)
       @nav_item_crumb = @nav_item_current.path
-      #TODO Breadcrumb would now contain the first child of the current page
       @nav_item_crumb.push @nav_item_current.children[0]
       @nav_item_crumb.each {|item|
-        @nav.push(item.siblings) if item
+        if(item)
+          siblings = NavItem.find(item.sibling_ids)
+          @nav.push(siblings)
+        end
       }
       @nav_item_crumb.pop
       logger.debug @nav.inspect

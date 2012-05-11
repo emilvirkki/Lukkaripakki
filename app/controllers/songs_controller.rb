@@ -2,7 +2,18 @@ class SongsController < ApplicationController
   # GET /songs
   # GET /songs.json
   def index
-    @songs = Song.all
+    @songs = Song.order("name")
+    @tags = Song.tag_counts_on(:tags)
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @songs }
+    end
+  end
+  
+  def tag
+    @tagname = params[:id]
+    @songs = Song.tagged_with(@tagname).order("name")
     @tags = Song.tag_counts_on(:tags)
 
     respond_to do |format|

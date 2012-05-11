@@ -4,6 +4,7 @@ SongArchive::Application.routes.draw do
   resources :pages
 
   resources :songs
+  match "songs/tag/:id" => "songs#tag"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
