@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xml:lang="fi" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html xml:lang="fi" lang="fi" xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
   <meta charset="utf-8" />
@@ -9,36 +9,33 @@
   <%= csrf_meta_tags %>
 </head>
 
-<body>
-	<br /><br/>
 <body class="nav-depth-<%=@nav.size%>">
+	<br /><br/>
 	<div id="wrapper">
 	
+		<header>
+			<div class="header">
+				<ul>
+					<li>
+						<a href="kirjaudu.html">Kirjaudu</a>
+					</li>
+					<li>
+						<a href="rekisteroidy.html">Rekisteröidy</a>
+					</li>
+				</ul>
+			</div>
 	
-	<header>
-	<div class="header">
-		<ul>
-			<li>
-				<a href="kirjaudu.html">Kirjaudu</a>
-			</li>
-			<li>
-				<a href="rekisteroidy.html">Rekisteröidy</a>
-			</li>
-		</ul>
-	</div>
+			<div class="navigation">
+    			<%= raw menu(@nav, @nav_item_crumb) %>
+			</div>
+		</header>
 	
-	<div class="navigation">
-    <%= raw menu(@nav, @nav_item_crumb) %>
-	</div>
-	</header>
-	
-	<div id="content">
-    <%= yield %>
-  </div>
+		<div id="content">
+	    	<%= yield %>
+	  	</div>
 
-<footer>
-</footer>
-
+		<footer>
+		</footer>
 
 	</div>
 </body>
