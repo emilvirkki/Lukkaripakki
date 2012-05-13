@@ -13,14 +13,14 @@ class ApplicationController < ActionController::Base
       @nav_item_crumb.push @nav_item_current.children[0]
       @nav_item_crumb.each {|item|
         if(item)
-          siblings = NavItem.find(item.sibling_ids)
+          siblings = NavItem.order("priority").find(item.sibling_ids)
           @nav.push(siblings)
         end
       }
       @nav_item_crumb.pop
       logger.debug @nav.inspect
     else
-      @nav.push NavItem.roots
+      @nav.push NavItem.order("priority").roots
     end
   end
   

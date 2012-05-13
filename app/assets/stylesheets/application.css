@@ -251,3 +251,17 @@ body.nav-depth-1 #content {
   padding: 5px;
   line-height: 35px;  
 }
+
+.flash-notice, .flash-error {
+  padding: 10px;
+}
+
+.flash-notice {
+  background: #AFA;
+  color: #383;
+}
+
+.flash-error {
+  background: #D00;
+  color: #FFF;
+}

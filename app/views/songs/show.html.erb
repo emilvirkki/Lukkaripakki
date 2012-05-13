@@ -1,9 +1,5 @@
-<p id="notice"><%= notice %></p>
-
 <div>
-	<p>
   <h1><%= @song.name %></h1>
-</p>
 <%= link_to t('actions.edit'), edit_song_path(@song) %> |
 <%= link_to t('actions.destroy'), @song, confirm: t('songs.confirm_destroy'), method: :delete %>
 </div>
@@ -16,7 +12,11 @@
 
 <p>
   <b><%= t('activerecord.attributes.song.extra_lyrics')%>:</b>
-  <%= simple_format @song.extra_lyrics %>
+  <% if(@song.extra_lyrics.length > 0) %>
+    <%= simple_format @song.extra_lyrics %>
+  <% else %>
+    <div class="empty">Ei lisäsäkeistöjä</div>
+  <% end %>
 </p>
 
 <%= link_to t('actions.back'), songs_path %>

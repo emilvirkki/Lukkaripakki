@@ -31,8 +31,15 @@
 		</header>
 	
 		<div id="content">
-	    	<%= yield %>
-	  	</div>
+      <% if alert %>
+        <p class="flash-error"><%= alert %></p>
+      <% end %>
+      <% if notice %>
+        <p class="flash-notice"><%= notice %></p>
+      <% end %>
+
+	    <%= yield %>
+	  </div>
 
 		<footer>
 		</footer>
