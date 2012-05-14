@@ -41,3 +41,7 @@ gem 'acts-as-taggable-on', '~> 2.2.2'
 
 # Tree structures
 gem 'ancestry'
+
+# User management plugin
+
+gem 'devise'

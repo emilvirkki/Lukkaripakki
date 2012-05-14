@@ -265,3 +265,11 @@ body.nav-depth-1 #content {
   background: #D00;
   color: #FFF;
 }
+
+#admin-nav, #devise-links, .actions, .field {
+  margin: 1em 0;
+}
+
+.field small {
+  display: block;
+}

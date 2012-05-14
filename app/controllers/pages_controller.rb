@@ -1,4 +1,6 @@
 class PagesController < ApplicationController
+  before_filter :require_admin, :except => [ :default, :show ]
+  
   # GET /pages
   # GET /pages.json
   def index

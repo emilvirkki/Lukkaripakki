@@ -10,18 +10,18 @@
 </head>
 
 <body class="nav-depth-<%=@nav.size%>">
-	<br /><br/>
 	<div id="wrapper">
 	
 		<header>
 			<div class="header">
 				<ul>
-					<li>
-						<a href="kirjaudu.html">Kirjaudu</a>
-					</li>
-					<li>
-						<a href="rekisteroidy.html">Rekisteröidy</a>
-					</li>
+				  <% if user_signed_in? %>
+				    <li><%= link_to(t('devise.ui.my_account'), edit_user_registration_path) %></li>
+						<li><%= link_to(t('devise.ui.sign_out'), destroy_user_session_path, :method => :delete) %></li>
+				  <% else %>
+				    <li><%= link_to(t('devise.ui.sign_up'), new_user_registration_path)  %></li>
+				    <li><%= link_to(t('devise.ui.sign_in'), new_user_session_path)  %></li>
+				  <% end %>
 				</ul>
 			</div>
 	
@@ -31,6 +31,14 @@
 		</header>
 	
 		<div id="content">
+		  <% if user_signed_in? && current_user.is_admin %>
+		    <div id="admin-nav">
+		      <%= t 'admin_nav.title' %>:
+		      <%= link_to t('admin_nav.pages'), pages_path %> |
+		      <%= link_to t('admin_nav.navigation'), nav_items_path %> |
+          <%= link_to t('admin_nav.users'), users_path %>
+		    </div>
+		  <% end %>
       <% if alert %>
         <p class="flash-error"><%= alert %></p>
       <% end %>

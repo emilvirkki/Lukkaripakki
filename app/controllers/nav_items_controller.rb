@@ -1,4 +1,5 @@
 class NavItemsController < ApplicationController
+  before_filter :require_admin
   
   # GET /nav_items
   # GET /nav_items.json

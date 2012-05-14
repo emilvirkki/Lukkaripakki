@@ -119,6 +119,7 @@ fi:
       too_long: on liian pitkä (saa olla enintään %{count} merkkiä)
       too_short: on liian lyhyt (oltava vähintään %{count} merkkiä)
       wrong_length: on väärän pituinen (täytyy olla täsmälleen %{count} merkkiä)
+      incorrect_mail_domain: ' ei kelpaa: sinun on käytettävä %{domain}-sähköpostiosoitettasi'
     template:
       body: ! 'Seuraavat kentät aiheuttivat ongelmia:'
       header:
@@ -198,6 +199,7 @@ fi:
     models:
       song: laulu
       page: sivu
+      user: käyttäjä
     attributes: 
       page:
         title: Otsikko
@@ -214,6 +216,14 @@ fi:
         melody: Sävel
         keywords: Tagit
         basic_information: Perustiedot
+      user:
+        nickname: Nimimerkki
+        email: Sähköposti
+        password: Salasana
+        password_confirmation: Salasanan vahvistus
+        current_password: 'Nykyinen salasana'
+        remember_me: 'Muista kirjautumiseni tällä tietokoneella'
+        is_admin: 'Ylläpitäjä'
     errors:
       <<: *errors
 
@@ -235,3 +245,9 @@ fi:
     edit: Muokkaa
     destroy: Poista
     all_pages: Kaikki sivut
+    save: 'Tallenna'
+  admin_nav:
+    title: 'Ylläpitovalikko'
+    pages: 'Sivut'
+    navigation: 'Valikko'
+    users: 'Käyttäjät'

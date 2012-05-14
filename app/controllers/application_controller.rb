@@ -2,7 +2,20 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
   before_filter :get_nav
   
+  def require_login
+    authenticate_user!
+  end
+  
+  def require_admin
+    require_login unless current_user
+    restrict_access unless current_user.is_admin
+  end
+  
   private
+  
+  def restrict_access
+    render :file => "public/401.html", :status => :unauthorized, :layout => false
+  end
   
   def get_nav
     @nav_item_current = get_current_nav_item

@@ -1,4 +1,7 @@
 SongArchive::Application.routes.draw do
+  devise_for :users, :path_prefix => 'd'
+  resources :users
+  
   resources :nav_items
 
   resources :pages

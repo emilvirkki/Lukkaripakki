@@ -55,5 +55,8 @@ module SongArchive
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+    
+    # Custom configuration
+    config.song_archive_allowed_mail_domain = 'aalto.fi'
   end
 end
