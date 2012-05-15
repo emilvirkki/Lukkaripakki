@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
   validates :nickname, :presence => true, :uniqueness => true
   validates :email, :format => {
     :with => Regexp.new('.*(@' + domain + ')'),
-    :message => :incorrect_mail_domain,  # :message => 'Please use your ' + domain + ' email address'
+    :message => :incorrect_mail_domain,
     :domain => domain
   }
 end

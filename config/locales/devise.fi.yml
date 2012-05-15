@@ -25,7 +25,7 @@ fi:
       signed_in: 'Olet nyt kirjautunut sisään.'
       signed_out: 'Olet nyt kirjautunut ulos.'
     passwords:
-      send_instructions: 'You will receive an email with instructions about how to reset your password in a few minutes.'
+      send_instructions: 'Saat muutaman minuutin sisällä sähköpostiisi ohjeet salasanan palauttamisesta.'
       updated: 'Your password was changed successfully. You are now signed in.'
       updated_not_active: 'Your password was changed successfully.'
       send_paranoid_instructions: "If your e-mail exists on our database, you will receive a password recovery link on your e-mail"
