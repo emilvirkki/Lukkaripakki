@@ -13,8 +13,9 @@ class PagesController < ApplicationController
   end
   
   def default
-    if NavItem.roots[0]
-      redirect_to NavItem.roots[0].realpath
+    default_page = NavItem.order("priority").roots[0];
+    if default_page
+      redirect_to default_page.realpath
     else
       redirect_to pages_path
     end

@@ -1,5 +1,5 @@
-<p>Welcome <%= @resource.email %>!</p>
+<p><%= t "devise.mail.welcome", :user => @resource.nickname %></p>
 
-<p>You can confirm your account email through the link below:</p>
+<p><%= t 'devise.mail.comfirm_instrucions' %></p>
 
-<p><%= link_to 'Confirm my account', confirmation_url(@resource, :confirmation_token => @resource.confirmation_token) %></p>
+<p><%= link_to t('devise.mail.confirm_link'), confirmation_url(@resource, :confirmation_token => @resource.confirmation_token) %></p>

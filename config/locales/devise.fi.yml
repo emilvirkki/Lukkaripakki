@@ -4,43 +4,43 @@ fi:
   errors:
     messages:
       expired: "has expired, please request a new one"
-      not_found: "not found"
-      already_confirmed: "was already confirmed, please try signing in"
+      not_found: "ei löytynyt"
+      already_confirmed: "on jo vahvistettu - ole hyvä ja kirjaudu sisään"
       not_locked: "was not locked"
       not_saved:
-        one: "1 error prohibited this %{resource} from being saved:"
-        other: "%{count} errors prohibited this %{resource} from being saved:"
+        one: "1 virhe esti tallentamisen:"
+        other: "%{count} virhettä esti tallentamisen:"
 
   devise:
     failure:
-      already_authenticated: 'You are already signed in.'
+      already_authenticated: 'Olet jo kirjautunut sisään.'
       unauthenticated: 'Rekisteröidy tai kirjaudu jatkaaksesi.'
       unconfirmed: 'Vahvista tilisi sähköpostistasi löytyvällä linkillä jatkaaksesi.'
-      locked: 'Your account is locked.'
+      locked: 'Tilisi on lukittu.'
       invalid: 'Väärä käyttäjätunnus tai salasana.'
       invalid_token: 'Invalid authentication token.'
-      timeout: 'Your session expired, please sign in again to continue.'
-      inactive: 'Your account was not activated yet.'
+      timeout: 'Istuntosi on vanhentunut, kirjaudu sisään jatkaaksesi.'
+      inactive: 'Tiliäsi ei ole vielä aktivoitu.'
     sessions:
       signed_in: 'Olet nyt kirjautunut sisään.'
       signed_out: 'Olet nyt kirjautunut ulos.'
     passwords:
       send_instructions: 'Saat muutaman minuutin sisällä sähköpostiisi ohjeet salasanan palauttamisesta.'
-      updated: 'Your password was changed successfully. You are now signed in.'
-      updated_not_active: 'Your password was changed successfully.'
+      updated: 'Salasanasi on vaihdettu. Olet nyt kirjautunut sisään.'
+      updated_not_active: 'Salasanasi on vaihdettu.'
       send_paranoid_instructions: "If your e-mail exists on our database, you will receive a password recovery link on your e-mail"
     confirmations:
-      send_instructions: 'You will receive an email with instructions about how to confirm your account in a few minutes.'
+      send_instructions: 'Saat muutaman minuutin sisällä sähköpostiisi ohjeet tilin vahvistamisesta.'
       send_paranoid_instructions: 'If your e-mail exists on our database, you will receive an email with instructions about how to confirm your account in a few minutes.'
-      confirmed: 'Your account was successfully confirmed. You are now signed in.'
+      confirmed: 'Tilisi on vahvistettu. Olet nyt kirjautunut sisään.'
     registrations:
-      signed_up: 'Welcome! You have signed up successfully.'
-      signed_up_but_unconfirmed: 'A message with a confirmation link has been sent to your email address. Please open the link to activate your account.'
+      signed_up: 'Käyttäjätilisi on nyt rekisteröity. Tervetuloa!'
+      signed_up_but_unconfirmed: 'Sinun tulee vahvistaa tilisi. Saat muutaman minuutin kuluessa sähköpostiisi vahvistuslinkin ja ohjeet tilisi vahvistamiseen.'
       signed_up_but_inactive: 'You have signed up successfully. However, we could not sign you in because your account is not yet activated.'
       signed_up_but_locked: 'You have signed up successfully. However, we could not sign you in because your account is locked.'
-      updated: 'You updated your account successfully.'
-      update_needs_confirmation: "You updated your account successfully, but we need to verify your new email address. Please check your email and click on the confirm link to finalize confirming your new email address."
-      destroyed: 'Bye! Your account was successfully cancelled. We hope to see you again soon.'
+      updated: 'Tilisi on päivitetty.'
+      update_needs_confirmation: 'Tilisi on päivitetty, mutta sinun on vahvistettava uusi sähköpostiosoitteesi. Ohjeet sähköpostiosoitteen vahvistamiseen on lähetetty uuteen sähköpostiisi.'
+      destroyed: 'Tilisi on poistettu.'
     unlocks:
       send_instructions: 'You will receive an email with instructions about how to unlock your account in a few minutes.'
       unlocked: 'Your account has been unlocked successfully. Please sign in to continue.'
@@ -50,11 +50,11 @@ fi:
       failure: 'Could not authorize you from %{kind} because "%{reason}".'
     mailer:
       confirmation_instructions:
-        subject: 'Confirmation instructions'
+        subject: 'Ohjeet käyttäjätilin vahvistamiseen'
       reset_password_instructions:
-        subject: 'Reset password instructions'
+        subject: 'Ohjeet salasanan palautukseen'
       unlock_instructions:
-        subject: 'Unlock Instructions'
+        subject: 'Ohjeet käyttäjätilin lukituksen purkamiseen.'
         
     ui:
       sign_out: 'Kirjaudu ulos'
@@ -68,3 +68,16 @@ fi:
       send: 'Lähetä'
       leave_blank: 'Jätä tyhjäksi, jos et halua muuttaa salasanaasi'
       confirm_with_pw: 'Sinun on vahvistettava muutokset nykyisellä salasanallasi'
+      change_pw: 'Muuta salasanaasi'
+      new_pw: 'Uusi salasana'
+      confirm_new_pw: 'Vahvista uusi salasana:'
+      change_my_pw: 'Vaihda salasana'
+    mail:
+      welcome: 'Tervetuloa %{user}!'
+      comfirm_instrucions: 'Vahvista tilisi klikkaamalla alla olevaa linkkiä:'
+      confirm_link: 'Vahvista tili'
+      hello: 'Moikka %{user}!'
+      pw_change: 'Joku on pyytänyt salasanan palautusta tilillesi - voit palauttaa salasanan alla olevalla linkillä.'
+      pw_change_link: 'Vaihda salasanani'
+      pw_change_do_nothing: 'Jos et pyytänyt salasanan palautusta, jätä tämä viesti huomiotta.'
+      pw_change_no_effect: 'Salasanasi ei muutu, ellet klikkaa yllä olevaa linkkiä ja muuta salasanaasi.'
