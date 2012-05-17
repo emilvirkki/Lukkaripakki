@@ -162,11 +162,16 @@ a:hover, a:active {
 	
 }
 
-.navigation .active > a, .navigation a:hover, .header a:hover {
- 
-  background-color: #660000;
-  color: #a6867b;
+.navigation .active > a, .navigation .active > a:hover {
+  	background:#551a14;
+  	color: #eecfb8;
 }
+
+.navigation a:hover, .header a:hover {
+	background-color: #660000;
+  	color: #a6867b;	
+}
+
 
 .navigation > ul > li > ul {
   position: absolute;
