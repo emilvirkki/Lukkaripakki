@@ -38,19 +38,18 @@ h1 {
 }
 
 a {
-	font-family: Big Caslon, helvetica, serif;
-	color: #eecfb8;
-	text-align: center;
-	text-decoration: none;
+	text-decoration: underline;
 	
-	border: 2px solid #401010;
-	background-color: #731d1d;
+	font-family: verdana, tahoma, helvetica, sans-serif;
+	font-size: 14px;
+	color: #401010;
+	
+	padding: 5px;
+	line-height: 35px;
 }
 
 a:hover, a:active {
 	text-decoration: none;
-	background-color: #660000;
-	color: #a6867b;
 }
 
 .rightside a, .fullcontent a {
@@ -61,14 +60,6 @@ a:hover, a:active {
 	
 	border: 0px solid #401010;
 	background-color: #f9f0ed;
-}
-
-.cont_navi a {
-	font-family: verdana, tahoma, helvetica, sans-serif;
-	font-size: 14px;
-	
-	padding: 5px;
-	line-height: 35px;	
 }
 
 #wrapper {
@@ -155,15 +146,27 @@ a:hover, a:active {
 }
  
 .navigation a {
+	text-decoration: none;
+	
 	display: block;
 	font-size: 20px;
 	padding: 8px;
 	line-height: 20px;
+	
+	text-align: center;
+	font-family: Big Caslon, helvetica, serif;
+	color: #eecfb8;
+	
+	border: 2px solid #401010;
+	background-color: #731d1d;
+	
 }
 
-.navigation .active > a {
-  background: rgb(85,26,20); 
-  }
+.navigation .active > a, .navigation a:hover, .header a:hover {
+ 
+  background-color: #660000;
+  color: #a6867b;
+}
 
 .navigation > ul > li > ul {
   position: absolute;
@@ -202,9 +205,17 @@ body.nav-depth-1 #content {
 }
 
 .header a {	
+	text-decoration: none;
 	font-size: 15px;
 	padding: 5px;
 	line-height: 35px;
+	
+	text-align: center;
+	font-family: Big Caslon, helvetica, serif;
+	color: #eecfb8;
+	
+	border: 2px solid #401010;
+	background-color: #731d1d;
 }
 
 .songlist {
