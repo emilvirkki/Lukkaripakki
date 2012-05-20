@@ -50,6 +50,8 @@ SongArchive::Application.configure do
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
+  
+  # Configure HUT smtp server for sending mail
   config.action_mailer.smtp_settings = {
     :address => 'smtp.hut.fi',
     :domain => 'hype.tml.hut.fi'

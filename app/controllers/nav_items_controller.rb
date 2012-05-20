@@ -1,4 +1,5 @@
 class NavItemsController < ApplicationController
+  # Only admins can make changes to nav items
   before_filter :require_admin
   
   # GET /nav_items

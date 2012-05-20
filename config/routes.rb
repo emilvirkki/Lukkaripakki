@@ -1,4 +1,6 @@
 SongArchive::Application.routes.draw do
+  
+  # Login functionality etc. under d namespace
   devise_for :users, :path_prefix => 'd'
   resources :users
   
@@ -6,6 +8,7 @@ SongArchive::Application.routes.draw do
 
   resources :pages
 
+  # Songs have crud, byt also a tag view
   resources :songs
   match "songs/tag/:id" => "songs#tag"
 
@@ -58,6 +61,7 @@ SongArchive::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
+  
   root :to => 'pages#default'
 
   # See how all your routes lay out with "rake routes"

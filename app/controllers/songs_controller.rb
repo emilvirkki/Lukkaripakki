@@ -1,9 +1,12 @@
 class SongsController < ApplicationController
+  # Only logged-in users can view, add, edit or delete songs.
+  # Admin rights are not required for any action relating to songs.
   before_filter :require_login
   
   # GET /songs
   # GET /songs.json
   def index
+    # Display all songs and tag list
     @songs = Song.order("name")
     @tags = Song.tag_counts_on(:tags)
 
@@ -14,6 +17,7 @@ class SongsController < ApplicationController
   end
   
   def tag
+    # Display songs for given tags and tag list
     @tagname = params[:id]
     @songs = Song.tagged_with(@tagname).order("name")
     @tags = Song.tag_counts_on(:tags)
@@ -27,6 +31,7 @@ class SongsController < ApplicationController
   # GET /songs/1
   # GET /songs/1.json
   def show
+    # Display the given song
     @song = Song.find(params[:id])
 
     respond_to do |format|
@@ -38,6 +43,7 @@ class SongsController < ApplicationController
   # GET /songs/new
   # GET /songs/new.json
   def new
+    # Create a new song and display the edit form
     @song = Song.new
 
     respond_to do |format|
@@ -48,18 +54,17 @@ class SongsController < ApplicationController
 
   # GET /songs/1/edit
   def edit
+    # Find the given song for editing
     @song = Song.find(params[:id])
   end
 
   # POST /songs
   # POST /songs.json
   def create
+    # Create the song from the given data
     @song = Song.new(params[:song])
+    # Make the given keywords tags
     @song.tag_list = @song.keywords
-    #laitetaanko tähän kaikki tagit, vai haetaan uudelle laululle asetetut tagit?
-    # muita mietintöjä yllä olevan tilalle:
-    # = 
-    # = Song.new(params[:keywords])
 
     respond_to do |format|
       if @song.save
@@ -76,6 +81,8 @@ class SongsController < ApplicationController
   # PUT /songs/1.json
   def update
     @song = Song.find(params[:id])
+    # Set the tags
+    @song.tag_list = params[:song][:keywords]
 
     respond_to do |format|
       if @song.update_attributes(params[:song])
