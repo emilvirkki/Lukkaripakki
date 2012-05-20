@@ -370,3 +370,9 @@ td {
 tr:nth-child(2n+0) td {
   background: #c0c0c0;
 }
+
+.required label:after {
+  content: '*';
+  font-weight: bold;
+  color: #D00;
+}

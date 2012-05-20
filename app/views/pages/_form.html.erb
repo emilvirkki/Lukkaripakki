@@ -1,13 +1,13 @@
 <%= form_for(@page) do |f| %>
   <%= render :partial => 'general/errors', :locals => { :model => @page } %>
   <h2><%= t('activerecord.attributes.page.page')%></h2>
-  <div class="field">
+  <div class="field required">
     <%= f.label :title %>
     <%= f.text_field :title %>
   </div>
-  <div class="field">
+  <div class="field required">
     <%= f.label :content %>
-    <%= f.text_area :content %>
+    <%= f.text_area :content, cols: 100, rows: 20 %>
   </div>
   <h2><%= t('activerecord.attributes.page.navigation')%></h2>
   <%= render :partial => 'nav_items/fields',

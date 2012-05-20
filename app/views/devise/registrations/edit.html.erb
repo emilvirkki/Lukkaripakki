@@ -3,12 +3,13 @@
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
   <%= devise_error_messages! %>
 
-  <div class="field">
+  <div class="field required">
     <%= f.label :nickname %>
     <%= f.text_field :nickname %>
+    <small><%= t 'devise.ui.nick_unique' %></small>
   </div>
 
-  <div class="field">
+  <div class="field required">
     <%= f.label :email %>
     <%= f.email_field :email %>
   </div>
@@ -24,7 +25,7 @@
     <%= f.password_field :password_confirmation %>
   </div>
 
-  <div class="field">
+  <div class="field required">
     <%= f.label :current_password %>
     <%= f.password_field :current_password %>
     <small><%= t 'devise.ui.confirm_with_pw' %></small>

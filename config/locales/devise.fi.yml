@@ -73,6 +73,7 @@ fi:
       confirm_new_pw: 'Vahvista uusi salasana:'
       change_my_pw: 'Vaihda salasana'
       email_limitation: 'Palveluun voi rekisteröityä vain toimivalla %{domain}-sähköpostiosoitteella.'
+      nick_unique: 'Nimimerkin on oltava uniikki.'
     mail:
       welcome: 'Tervetuloa %{user}!'
       comfirm_instrucions: 'Vahvista tilisi klikkaamalla alla olevaa linkkiä:'

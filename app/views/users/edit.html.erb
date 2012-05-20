@@ -1,11 +1,11 @@
 <h1><%= t 'users.edit' %></h1>
 <%= form_for(@user) do |f| %>
   <%= render :partial => 'general/errors', :locals => { :model => @user } %>
-  <div class="field">
+  <div class="field required">
     <%= f.label :nickname %>
     <%= f.text_field :nickname %>
   </div>
-  <div class="field">
+  <div class="field required">
     <%= f.label :email %>
     <%= f.email_field :email %>
   </div>

@@ -2,17 +2,17 @@
   <%= render :partial => 'general/errors', :locals => { :model => @song } %>
 
   <h2><%= t('activerecord.attributes.song.basic_information')%></h2>
-  <div class="field">
+  <div class="field required">
     <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, size: 50 %>
   </div>
   <div class="field">
     <%= f.label :introduction %>
-    <%= f.text_area :introduction %>
+    <%= f.text_area :introduction, cols: 60, rows: 10 %>
   </div>
   <div class="field">
     <%= f.label :melody %>
-    <%= f.text_field :melody %>
+    <%= f.text_field :melody, size: 50 %>
   </div>
   <div class="field">
     <%= f.label :lyrics_author %>
@@ -20,19 +20,19 @@
   </div>
     <div class="field">
     <%= f.label :songbook_number %>
-    <%= f.text_field :songbook_number %>
+    <%= f.text_field :songbook_number, size: 5 %>
   </div>
   <div class="field">
     <%= f.label :keywords %>
-    <%= f.text_area :keywords %>
+    <%= f.text_field :keywords, size: 50 %>
   </div>
-    <div class="field">
+    <div class="field required">
     <h2><%= f.label :lyrics %></h2>
-    <%= f.text_area :lyrics %>
+    <%= f.text_area :lyrics, cols: 60, rows: 20 %>
   </div>
   <div class="field">
    <h2> <%= f.label :extra_lyrics %></h2>
-    <%= f.text_area :extra_lyrics %>
+    <%= f.text_area :extra_lyrics, cols: 60, rows: 20 %>
   </div>
   <div class="actions">
     <%= f.submit %>

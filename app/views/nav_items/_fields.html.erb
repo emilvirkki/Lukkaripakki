@@ -1,7 +1,7 @@
 <%= form.fields_for(:nav_item, @nav_item) do |f| %>
   <%= render :partial => 'general/errors', :locals => { :model => @nav_item } %>
 
-  <div class="field">
+  <div class="field required">
     <%= f.label :title %>
     <%= f.text_field :title %>
   </div>
