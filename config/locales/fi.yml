@@ -246,6 +246,7 @@ fi:
     created: 'Laulu on luotu.'
     saved: 'Laulu on tallennettu.'
     destroyed: 'Laulu on poistettu.'
+    for_tag: 'Laulut tagille: %{tag}'
   pages:
     new: Uusi sivu
     list: Kaikki sivut

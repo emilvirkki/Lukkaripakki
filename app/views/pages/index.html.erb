@@ -1,5 +1,9 @@
 <h1><%= t('pages.list') %></h1>
 
+<div class="actions">
+  <%= link_to t('pages.new'), new_page_path %>
+</div>
+
 <table>
   <tr>
     <th><%= t('activerecord.attributes.page.title') %></th>
@@ -17,7 +21,3 @@
   </tr>
 <% end %>
 </table>
-
-<br />
-
-<%= link_to t('pages.new'), new_page_path %>

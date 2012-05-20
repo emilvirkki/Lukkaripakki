@@ -43,9 +43,6 @@ a {
 	font-family: verdana, tahoma, helvetica, sans-serif;
 	font-size: 14px;
 	color: #401010;
-	
-	padding: 5px;
-	line-height: 35px;
 }
 
 a:hover, a:active {
@@ -320,4 +317,56 @@ label {
 
 .checkbox label {
   display: inline;
+}
+
+h2 {
+  font-family: tahoma, verdana, helvetica, sans-serif;
+  font-size: 19px;  
+  font-weight: normal;
+  background-color: #c0c0c0;
+}
+
+#tagcloud {
+  background-color: #fefdfd;
+  width: 300px;
+  border:2px solid #401010;
+  padding: 10px;
+  margin: 0 0 2em 2em;
+  float: right;
+}
+  
+#tagcloud a{
+  font-family: helvetica, serif;
+  color: #401010;
+  text-align: center;
+  text-decoration: none;
+  border: 0px;
+  background-color: rgb(255,255,255);
+  }
+
+#song {
+  float: left;
+  width: 430px;
+}
+
+#information {
+  float: right;
+  width: 430px;
+}
+  
+.css1 { font-size: 0.8em; }
+.css2 { font-size: 1.1em; }
+.css3 { font-size: 1.4em; }
+.css4 { font-size: 1.7em; }
+
+table {
+  border-collapse: collapse;
+}
+
+td {
+  padding: 5px;
+}
+
+tr:nth-child(2n+0) td {
+  background: #c0c0c0;
 }
