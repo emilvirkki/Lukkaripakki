@@ -4,10 +4,10 @@
   <%= devise_error_messages! %>
   <%= f.hidden_field :reset_password_token %>
 
-  <div class="field"><%= f.label :password, t('devise.ui.new_pw') %><br />
+  <div class="field"><%= f.label :password, t('devise.ui.new_pw') %>
   <%= f.password_field :password %></div>
 
-  <div class="field"><%= f.label :password_confirmation, t('devise.ui.confirm_new_pw') %><br />
+  <div class="field"><%= f.label :password_confirmation, t('devise.ui.confirm_new_pw') %>
   <%= f.password_field :password_confirmation %></div>
 
   <div class="actions"><%= f.submit t('devise.ui.change_my_pw') %></div>

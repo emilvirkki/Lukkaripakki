@@ -1,47 +1,37 @@
 <%= form_for(@song) do |f| %>
-  <% if @song.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@song.errors.count, "error") %> prohibited this song from being saved:</h2>
+  <%= render :partial => 'general/errors', :locals => { :model => @song } %>
 
-      <ul>
-      <% @song.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-<h2><%= t('activerecord.attributes.song.basic_information')%></h2>
+  <h2><%= t('activerecord.attributes.song.basic_information')%></h2>
   <div class="field">
-    <%= f.label :name %><br />
+    <%= f.label :name %>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :introduction %><br />
+    <%= f.label :introduction %>
     <%= f.text_area :introduction %>
   </div>
   <div class="field">
-    <%= f.label :melody %><br />
+    <%= f.label :melody %>
     <%= f.text_field :melody %>
   </div>
   <div class="field">
-    <%= f.label :lyrics_author %><br />
+    <%= f.label :lyrics_author %>
     <%= f.text_field :lyrics_author %>
   </div>
     <div class="field">
-    <%= f.label :songbook_number %><br />
+    <%= f.label :songbook_number %>
     <%= f.text_field :songbook_number %>
   </div>
   <div class="field">
-    <%= f.label :keywords %><br />
+    <%= f.label :keywords %>
     <%= f.text_area :keywords %>
   </div>
     <div class="field">
-    <h2><%= f.label :lyrics %><br /></h2>
+    <h2><%= f.label :lyrics %></h2>
     <%= f.text_area :lyrics %>
   </div>
   <div class="field">
-   <h2> <%= f.label :extra_lyrics %><br /></h2>
+   <h2> <%= f.label :extra_lyrics %></h2>
     <%= f.text_area :extra_lyrics %>
   </div>
   <div class="actions">

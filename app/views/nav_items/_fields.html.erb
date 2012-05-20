@@ -1,26 +1,16 @@
 <%= form.fields_for(:nav_item, @nav_item) do |f| %>
-  <% if @nav_item.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@nav_item.errors.count, "error") %> prohibited this page from being saved:</h2>
-
-      <ul>
-      <% @nav_item.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <%= render :partial => 'general/errors', :locals => { :model => @nav_item } %>
 
   <div class="field">
-    <%= f.label :title %><br />
+    <%= f.label :title %>
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :parent %><br />
+    <%= f.label :parent %>
     <%= f.select :parent_id, nav_items_options(@nav_item) %>
   </div>
   <div class="field">
-    <%= f.label :priority %><br />
+    <%= f.label :priority %>
     <%= f.text_field :priority %>
   </div>
 <% end %>

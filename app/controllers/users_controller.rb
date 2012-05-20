@@ -41,7 +41,7 @@ class UsersController < ApplicationController
     params[:user].delete(:is_admin)
     respond_to do |format|
       if @user.update_attributes(params[:user])
-        format.html { redirect_to users_url, notice: 'User was successfully updated.' }
+        format.html { redirect_to users_url, notice: t('users.saved') }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -57,7 +57,7 @@ class UsersController < ApplicationController
     @user.destroy
 
     respond_to do |format|
-      format.html { redirect_to users_url }
+      format.html { redirect_to users_url, notice: t('users.destroyed') }
       format.json { head :no_content }
     end
   end

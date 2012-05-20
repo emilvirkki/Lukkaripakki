@@ -123,8 +123,8 @@ fi:
     template:
       body: ! 'Seuraavat kentät aiheuttivat ongelmia:'
       header:
-        one: Virhe syötteessä esti mallin %{model} tallentamisen
-        other: ! '%{count} virhettä esti mallin %{model} tallentamisen'
+        one: virhe esti tallentamisen
+        other: ! 'virhettä esti tallentamisen'
   helpers:
     select:
       prompt: Valitse
@@ -200,6 +200,7 @@ fi:
       song: laulu
       page: sivu
       user: käyttäjä
+      nav_item: valikkokohta
     attributes: 
       page:
         title: Otsikko
@@ -224,9 +225,17 @@ fi:
         current_password: 'Nykyinen salasana'
         remember_me: 'Muista kirjautumiseni tällä tietokoneella'
         is_admin: 'Ylläpitäjä'
+        created_at: 'Luotu'
+      nav_item:
+        title: Otsikko
+        parent: Yläsivu
+        priority: Paino
+        explicit_path: 'Polku'
     errors:
       <<: *errors
-
+  bool:
+    yes: 'Kyllä'
+    no: 'Ei'
   songs:
     new: Uusi laulu arkistoon
     create: Luo laulu
@@ -234,11 +243,35 @@ fi:
     edit: Muokkaa laulua arkistossa
     archive: Lauluarkisto
     confirm_destroy: Haluatko varmasti poistaa laulun?
+    created: 'Laulu on luotu.'
+    saved: 'Laulu on tallennettu.'
+    destroyed: 'Laulu on poistettu.'
   pages:
     new: Uusi sivu
     list: Kaikki sivut
     confirm_destroy: Haluatko varmasti poistaa sivun?
     edit: Muokkaa sivua
+    created: 'Sivu on luotu.'
+    saved: 'Sivu on tallennettu.'
+    destroyed: 'Sivu on poistettu.'
+  users:
+    list: 'Käyttäjät'
+    confirm_destroy: 'Haluatko varmasti poistaa käyttäjän?'
+    user: Käyttäjä
+    edit: 'Muokkaa käyttäjää'
+    created: 'Käyttäjä on luotu.'
+    saved: 'Käyttäjä on tallennettu.'
+    destroyed: 'Käyttäjä on poistettu.'
+  nav_items:
+    list: 'Valikko'
+    new: 'Uusi valikkokohta'
+    title: 'Otsikko'
+    confirm_destroy: 'Haluatko varmasti poistaa valikkokohdan?'
+    edit: 'Muokkaa valikkokohtaa'
+    none_option: '<juuri>'
+    created: 'Valikkokohta on luotu.'
+    saved: 'Valikkokohta on tallennettu.'
+    destroyed: 'Valikkokohta on poistettu.'
   actions:
     show: Näytä
     back: Takaisin

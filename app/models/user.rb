@@ -1,5 +1,9 @@
 class User < ActiveRecord::Base
-  domain = Rails.configuration.song_archive_allowed_mail_domain
+  @@domain = Rails.configuration.song_archive_allowed_mail_domain
+  
+  def self.domain
+    return @@domain
+  end
   
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable

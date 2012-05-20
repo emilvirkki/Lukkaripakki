@@ -37,7 +37,7 @@ class NavItemsController < ApplicationController
 
     respond_to do |format|
       if @nav_item.save
-        format.html { redirect_to nav_items_path, notice: 'Item was successfully created.' }
+        format.html { redirect_to nav_items_path, notice: t('nav_items.created') }
         format.json { render json: @nav_item, status: :created, location: @nav_item }
       else
         format.html { render action: "new" }
@@ -53,7 +53,7 @@ class NavItemsController < ApplicationController
 
     respond_to do |format|
       if @item.update_attributes(params[:item])
-        format.html { redirect_to nav_items_url, notice: 'Item was successfully updated.' }
+        format.html { redirect_to nav_items_url, notice: t('nav_items.saved') }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -69,7 +69,7 @@ class NavItemsController < ApplicationController
     @item.destroy
 
     respond_to do |format|
-      format.html { redirect_to nav_items_url }
+      format.html { redirect_to nav_items_url, notice: t('nav_items.destroyed') }
       format.json { head :no_content }
     end
   end

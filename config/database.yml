@@ -22,7 +22,7 @@ production:
   adapter: postgresql
   host: localhost
   encoding: unicode
-  database: hype2007-demo
+  database: hype2007-final
   pool: 5
   username: hype2007
   password: 

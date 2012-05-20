@@ -1,7 +1,9 @@
-<h1>User: <%= @user.email %></h1>
-<%= link_to t('actions.edit'), edit_user_path(@user) %> |
-<%= link_to t('actions.destroy'), @user, confirm: 'Really delete user?', method: :delete %>
-<div><b>Nickname: </b><%= @user.nickname %></div>
-<div><b>Email: </b><%= @user.email %></div>
-<div><b>Admin: </b><%= @user.is_admin ? "Yes" : "No" %></div>
-<div><b>User since: </b><%= @user.created_at %></div>
+<h1><%= t 'users.user' %>: <%= @user.email %></h1>
+<div class="actions">
+  <%= link_to t('actions.edit'), edit_user_path(@user) %> |
+  <%= link_to t('actions.destroy'), @user, confirm: t('users.confirm_destroy'), method: :delete %>
+</div>
+<div><b><%= t 'activerecord.attributes.user.nickname' %>: </b><%= @user.nickname %></div>
+<div><b><%= t 'activerecord.attributes.user.email' %>: </b><%= @user.email %></div>
+<div><b><%= t 'activerecord.attributes.user.is_admin' %>: </b><%= @user.is_admin ? t('bool.yes') : t('bool.no') %></div>
+<div><b><%= t 'activerecord.attributes.user.created_at' %>: </b><%= @user.created_at %></div>

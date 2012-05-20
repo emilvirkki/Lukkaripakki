@@ -1,22 +1,12 @@
 <%= form_for(@page) do |f| %>
-  <% if @page.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@page.errors.count, "error") %> prohibited this item from being saved:</h2>
-
-      <ul>
-      <% @page.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <%= render :partial => 'general/errors', :locals => { :model => @page } %>
   <h2><%= t('activerecord.attributes.page.page')%></h2>
   <div class="field">
-    <%= f.label :title %><br />
+    <%= f.label :title %>
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :content %><br />
+    <%= f.label :content %>
     <%= f.text_area :content %>
   </div>
   <h2><%= t('activerecord.attributes.page.navigation')%></h2>

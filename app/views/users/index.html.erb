@@ -1,4 +1,4 @@
-<h1>All users</h1>
+<h1><%= t 'users.list' %></h1>
 
 <table>
   <tbody>
@@ -7,7 +7,7 @@
       <td><%= user.email %></td>
       <td><%= link_to t('actions.show'), user %></td>
       <td><%= link_to t('actions.edit'), edit_user_path(user) %></td>
-      <td><%= link_to t('actions.destroy'), user, confirm: 'Really destroy user?', method: :delete %></td>
+      <td><%= link_to t('actions.destroy'), user, confirm: t('users.confirm_destroy'), method: :delete %></td>
     </tr>
 <% end %>
   </tbody>

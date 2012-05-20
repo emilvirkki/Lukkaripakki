@@ -4,28 +4,28 @@
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.label :nickname %><br />
+    <%= f.label :nickname %>
     <%= f.text_field :nickname %>
   </div>
 
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label :email %>
     <%= f.email_field :email %>
   </div>
 
   <div class="field">
-    <%= f.label :password %><br />
+    <%= f.label :password %>
     <%= f.password_field :password, :autocomplete => "off" %>
     <small><%= t 'devise.ui.leave_blank' %></small>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
+    <%= f.label :password_confirmation %>
     <%= f.password_field :password_confirmation %>
   </div>
 
   <div class="field">
-    <%= f.label :current_password %><br />
+    <%= f.label :current_password %>
     <%= f.password_field :current_password %>
     <small><%= t 'devise.ui.confirm_with_pw' %></small>
   </div>

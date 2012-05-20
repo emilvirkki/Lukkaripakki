@@ -1,21 +1,21 @@
-<h1>Listing navigation items</h1>
+<h1><%= t 'nav_items.list' %></h1>
+
+<div class="actions">
+  <%= link_to t('nav_items.new'), new_nav_item_path %>
+</div>
 
 <table>
   <tr>
-    <th>Title</th>
+    <th><%= t 'nav_items.title' %></th>
     <th></th>
     <th></th>
   </tr>
 
 <% @nav_items.each do |item| %>
   <tr>
-    <td><%= link_to item.title %></td>
-    <td><%= link_to 'Edit', edit_nav_item_path(item) %></td>
-    <td><%= link_to 'Destroy', item, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= item.title %></td>
+    <td><%= link_to t('actions.edit'), edit_nav_item_path(item) %></td>
+    <td><%= link_to t('actions.destroy'), item, confirm: t('nav_items.confirm_destroy'), method: :delete %></td>
   </tr>
 <% end %>
 </table>
-
-<br />
-
-<%= link_to 'New Nav Item', new_nav_item_path %>

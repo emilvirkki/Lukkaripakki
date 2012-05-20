@@ -1,16 +1,12 @@
 module ApplicationHelper
   
-  def user_admin?
-    # TODO Admin user level
-  end
-  
   #FIXME possible to set item it's own child or child's child
   def nav_items_options(current)
      items = NavItem.sort_by_ancestry(NavItem.all);
      items = items.collect {|item|
        [  '--' * item.depth + item.title , item.id ]
      }
-     items.unshift [ '<none>' , nil ]
+     items.unshift [ t('nav_items.none_option') , nil ]
      items
   end
   
