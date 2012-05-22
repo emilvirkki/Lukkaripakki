@@ -1,6 +1,5 @@
 module ApplicationHelper
   
-  #FIXME possible to set item it's own child or child's child
   # Returns an array of key-value pairs to be used as options for the nav item's parent
   # dropdown. Dashes are used to represent the item depth.
   def nav_items_options(current)

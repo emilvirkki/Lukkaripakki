@@ -9,9 +9,9 @@ class NavItem < ActiveRecord::Base
   #Initialize the model with a priority
   after_initialize :default_values
   
-  #FIXME breaks saving
   # Priority must be an integer
   validates :priority, :numericality => { :only_integer => true }
+  validates :title, :presence => true
   
   # Realpath is the path where clicking the nav item should take the user.
   # The nav item can either relate to a page or have an explicitly defined path.
@@ -37,8 +37,10 @@ class NavItem < ActiveRecord::Base
   
   # Give a default priority of 0
   def default_values
-    #FIXME Breaks the nav for some reason but is needed for saving
-    #self.priority ||= 0
+    self.priority ||= 0
+    rescue ActiveModel::MissingAttributeError
+      # This can be safely ignored: error is thrown only when NavItem.exists?() is called, because the
+      # priority field isn't fetched
   end
   
 end
