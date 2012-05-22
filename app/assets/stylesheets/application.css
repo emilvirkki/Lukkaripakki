@@ -291,13 +291,13 @@ th {
   display: block;
 }
 
-.error_explanation {
+.error_explanation, #error_explanation {
   border: 1px solid #D00;
   background: #FFF;
   color: #D00;
 }
 
-.error_explanation h2 {
+.error_explanation h2, #error_explanation h2 {
   margin: 0 0 1em;
   padding: 0.5em 0.7em;
   font-size: 1em;
@@ -375,4 +375,9 @@ tr:nth-child(2n+0) td {
   content: '*';
   font-weight: bold;
   color: #D00;
+}
+
+img {
+  float: right;
+  margin: 10px 0 10px 10px;
 }
