@@ -32,9 +32,7 @@ class NavItemsController < ApplicationController
   # POST /nav_items
   # POST /nav_items.json
   def create
-    item = params[:nav_item][:nav_item]
-    item[:explicit_path] = params[:nav_item][:explicit_path]
-    @nav_item = NavItem.new(item)
+    @nav_item = NavItem.new(extract_item(params))
 
     respond_to do |format|
       if @nav_item.save
@@ -53,7 +51,7 @@ class NavItemsController < ApplicationController
     @item = NavItem.find(params[:id])
 
     respond_to do |format|
-      if @item.update_attributes(params[:item])
+      if @item.update_attributes(extract_item(params))
         format.html { redirect_to nav_items_url, notice: t('nav_items.saved') }
         format.json { head :no_content }
       else
@@ -73,5 +71,13 @@ class NavItemsController < ApplicationController
       format.html { redirect_to nav_items_url, notice: t('nav_items.destroyed') }
       format.json { head :no_content }
     end
+  end
+  
+  private
+  
+  def extract_item(hash)
+    item = hash[:nav_item][:nav_item]
+    item[:explicit_path] = hash[:nav_item][:explicit_path]
+    item
   end
 end
