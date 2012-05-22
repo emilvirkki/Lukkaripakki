@@ -221,11 +221,13 @@ fi:
         nickname: Nimimerkki
         email: Sähköposti
         password: Salasana
-        password_confirmation: Salasanan vahvistus
+        password_confirmation: Vahvista salasana
         current_password: 'Nykyinen salasana'
         remember_me: 'Muista kirjautumiseni tällä tietokoneella'
         is_admin: 'Ylläpitäjä'
         created_at: 'Luotu'
+        new_pw: 'Uusi salasana'
+        confirm_new_pw: 'Vahvista uusi salasana'
       nav_item:
         title: Otsikko
         parent: Yläsivu

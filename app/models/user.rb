@@ -22,4 +22,5 @@ class User < ActiveRecord::Base
     :message => :incorrect_mail_domain,
     :domain => domain
   }
+  
 end

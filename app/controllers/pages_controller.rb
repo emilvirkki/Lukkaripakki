@@ -15,14 +15,7 @@ class PagesController < ApplicationController
   end
   
   def default
-    # By default the first path of the first level of navigation is used as default page
-    default_page = NavItem.order("priority").roots[0];
-    if default_page
-      redirect_to default_page.realpath
-    else
-      # If there's nothign in the nav, redirect the user to create some pages
-      redirect_to pages_path
-    end
+    redirect_to NavItem.default_page;
   end
 
   # GET /pages/1

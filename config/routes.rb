@@ -1,7 +1,7 @@
 SongArchive::Application.routes.draw do
   
   # Login functionality etc. under d namespace
-  devise_for :users, :path_prefix => 'd'
+  devise_for :users, :path_prefix => 'd', :controllers => { :registrations => "registrations" }
   resources :users
   
   resources :nav_items

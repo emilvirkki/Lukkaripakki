@@ -13,22 +13,22 @@
     <%= f.label :email %>
     <%= f.email_field :email %>
   </div>
+  
+  <div class="field required">
+    <%= f.label :current_password %>
+    <%= f.password_field :current_password %>
+    <small><%= t 'devise.ui.confirm_with_pw' %></small>
+  </div>
 
   <div class="field">
-    <%= f.label :password %>
+    <%= f.label :password, t('activerecord.attributes.user.new_pw') %>
     <%= f.password_field :password, :autocomplete => "off" %>
     <small><%= t 'devise.ui.leave_blank' %></small>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %>
+    <%= f.label :password_confirmation, t('activerecord.attributes.user.confirm_new_pw') %>
     <%= f.password_field :password_confirmation %>
-  </div>
-
-  <div class="field required">
-    <%= f.label :current_password %>
-    <%= f.password_field :current_password %>
-    <small><%= t 'devise.ui.confirm_with_pw' %></small>
   </div>
 
   <div class="actions"><%= f.submit t('actions.save') %></div>

@@ -24,6 +24,17 @@ class NavItem < ActiveRecord::Base
     '/' + self.explicit_path
   end
   
+  def self.default_page
+    # By default the first path of the first level of navigation is used as default page
+    default_page = NavItem.order("priority").roots[0]
+    if default_page
+      return default_page.realpath
+    else
+      # If there's nothign in the nav, take the user to create some pages
+      return pages_path
+    end
+  end
+  
   # Give a default priority of 0
   def default_values
     #FIXME Breaks the nav for some reason but is needed for saving
